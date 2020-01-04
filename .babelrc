@@ -1,0 +1,7 @@
+{
+    // lets use last ECMAScript 6 features:
+    "presets": [
+        "env", 
+        "stage-0"
+    ]
+}
