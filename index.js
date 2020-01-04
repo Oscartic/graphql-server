@@ -9,7 +9,18 @@ app.get('/', (req, res) => {
 });
 
 // resolver 
-const root = {hello: () => "Hello word from GraphQL"}
+const root = {client: () => {
+    return {
+        "id": 464354545,
+        "name": "Oscar ",
+        "last_name": "Ballesteros",
+        "company": "ORB",
+        "emails": [
+            {email: "oscar@mail.com" },
+            {email: "oscar@company.com" }
+        ]
+    }
+}}
 
 app.use('/graphql', graphqlHTTP({
     // schema use for this url 
