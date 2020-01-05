@@ -1,12 +1,13 @@
 class Client {
-    constructor(id, {name, last_name, company, email, age, type}){
+    constructor(id, {name, last_name, company, emails, age, type, orders}){
         this.id = id;
         this.name = name; 
         this.last_name = last_name;
         this.company = company;
-        this.email = email;
+        this.emails = emails;
         this.age = age;
         this.type = type;
+        this.orders = orders;
     }
 }
 
