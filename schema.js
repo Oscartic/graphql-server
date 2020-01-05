@@ -7,9 +7,15 @@ const schema = buildSchema(`
         last_name: String
         company: String
         email: String
+        age: Int
+        type: ClientType
+    }
+    enum ClientType {
+        BASIC
+        PREMIUM
     }
     type Query {
-        client: Client
+        getClient(id: ID) : Client
     }
     input InputClient {
         id: ID
@@ -17,6 +23,8 @@ const schema = buildSchema(`
         last_name: String!
         company: String!
         email: String!
+        age: Int
+        type: ClientType!
     }
     type Mutation {
         createClient(input: InputClient) : Client
@@ -24,3 +32,8 @@ const schema = buildSchema(`
 `); 
 
 export default schema; 
+
+/* 
+TIPOS DE DATOS EN GraphQL 
+int, float, string, id(número único), boolean
+*/
